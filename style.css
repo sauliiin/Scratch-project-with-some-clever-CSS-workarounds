@@ -111,6 +111,7 @@ main .main__conteiner {
 
 .main__text h1 {
     font-size: 4rem;
+    line-height: 4.5rem;
 }
 
 .main__text h2 {
@@ -163,8 +164,32 @@ main .main__conteiner {
         width: 100%;
         height: 100%;
         left: 100%;
+        transition: 0.5s;
+        flex-direction: column;
+        justify-content: center;  
+    }
+    .links__navigation li {
+        font-size: 20px;
+        margin: 25px 0;
     }
     .links__navigation.ativo {
         left: 0%;
+    }
+    main .main__conteiner {
+        flex-direction: column;
+    }
+    main .main__conteiner .main__img {
+        width: 100%;
+        margin-top: 10px;
+    }
+    main .main__conteiner .main__text {
+        width: 100%;
+        text-align: center;
+    }
+    main .main__conteiner h1 {
+        font-size: 3.8rem;
+    }
+    main .main__conteiner .main__text div {
+        justify-content: center;
     }
 }
