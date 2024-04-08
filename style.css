@@ -56,14 +56,15 @@ li, a, button {
     --text-color: #fff;
     --link-color: #fff;
     --btn-gradient: linear-gradient(#fe9611, #ff5c00);
+    --bg-resultado-section: #fe9611;
 }
 
 body {
     max-width: 1110px;
     padding: 0 5%;
     margin: 0 auto;
-    font-family: 'Poppins', sans-serif;
-    background: var(--main-backgroud);
+    font-family: 'Poppins', sans-serif; 
+    background: var(--main-backgroud); 
 }
 
 header {
@@ -71,6 +72,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
+    background: var(--main-backgroud);
 }
 
 .logo {
@@ -96,11 +98,12 @@ ul li a {
 
 /* MAIN */
 
-main .main__conteiner {
+.main__conteiner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 30px;
+    padding-top: 30px;
+    background: var(--main-backgroud);
 }
 
 .main__text {
@@ -150,9 +153,82 @@ main .main__conteiner {
     font-weight: bold;
 }
 
+/* SECTION Resultados */
+.resultados {
+    background: var(--bg-resultado-section);
+    border-radius: 12px;
+    margin-top: 20px;
+    padding: 2.7rem 1.4rem;
+}
+
+.resultados .container__resultados {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resultados .resultados__text {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 50%;
+}
+
+.resultados .resultados__numeros {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultados .resultados__numeros p {
+    text-align: center;
+    margin: 0 30px;
+    font-size: 20px;
+}
+
+.resultados .resultados__numeros p span {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.diferenciais .conteiner__diferenciais {
+    /* background: white; */
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+
+.diferenciais .card {
+    width: 26%;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 15px;
+    background: white;
+    transition: 0.3s;
+}
+
+.diferenciais .card:hover {
+    /* box-shadow: 0px 10px 67px 8px #e6e6fa85; */
+    box-shadow: 0px 0px 20px 5px #0000005e;
+}
+
+.diferenciais .card img {
+    width: 60px;
+}
+
+.diferenciais .card .titulo {
+    margin: 13px 0;
+    font-weight: 600;
+}
+
+
+footer {
+    padding: 2.7rem  1.4rem;
+}
+
 
 /* REPONSIVOS */
-
 @media (max-width: 960px) {
     .menu__icon {
         display: block;
@@ -179,8 +255,8 @@ main .main__conteiner {
         flex-direction: column;
     }
     main .main__conteiner .main__img {
-        width: 100%;
-        margin-top: 10px;
+        width: 80%;
+        margin-top: 25px;
     }
     main .main__conteiner .main__text {
         width: 100%;
@@ -191,5 +267,39 @@ main .main__conteiner {
     }
     main .main__conteiner .main__text div {
         justify-content: center;
+    }
+    .resultados .container__resultados {
+        flex-direction: column;
+    }
+    .resultados .resultados__text,
+    .resultados .resultados__numeros {
+        width: 100%;
+        text-align: center;
+    }
+    .resultados__numeros {
+        margin-top: 30px;
+    }
+    .diferenciais .conteiner__diferenciais {
+        flex-direction: column;
+    }
+    .diferenciais .card {
+        width: 92%;
+        display: flex;
+        margin: 20px auto;
+    }
+    .card .texto__card {
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width: 440px) {
+    .main__conteiner .main__text h1 {
+        font-size: 3rem;
+    }
+    .resultados .resultados__numeros {
+        flex-direction: column;
+    }
+    .resultados .resultados__numeros p {
+        padding-bottom: 18px;
     }
 }
