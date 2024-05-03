@@ -12,39 +12,46 @@ menuIcon.addEventListener('click', function abrirMenu() {
         document.querySelector('.menu__icon img').src = 'assets/closeX-icon.png'
     }
 })
+//========================================================================================================//
 
+function anyKeyPressed (event) {
+    let campo = event.target;            // Pega o campo onde o evento ocorreu
+    campo.value = mascara(campo.value);   // Chama a função máscara para o valor do campo
+}
 
-
-
-let consumo = (X - 24.26)*0.95553117
+function mascara (valorRecebido) {
+    valorRecebido = valorRecebido.replace(/\D/g,'');  
+    valorRecebido = valorRecebido.replace(/(\d)(\d{2})$/,"$1,$2"); // Coloca uma virgula antes do 2 últimos números
+    if ((Number(valorRecebido.replace(',','.'))) > 1000) setTimeout(() => {alert('Maior que 1000, Blablabla')}, 300);
+    return valorRecebido;
+}
 
 function custoPainel (consumo) {
-    switch(consumo) {
-        case (consumo > 0 && consumo <= 400):
-            return 15000
-        case (consumo > 400 && consumo <= 600):
-            return 22000
-        case (consumo > 600 && consumo <= 800):
-            return 25000
-        case (consumo > 800 && consumo <= 1000):
-            return 15000
-        default:
-            console.log('ERRO') // Default é pra quando nenhuma das opções anteriores retornou resultado. Se ela estiver no final, nao precisa do break
-    }    
-}
+    if (consumo > 0 && consumo <= 400) return 15000;
+    if (consumo > 400 && consumo <= 600) return 22000;
+    if (consumo > 600 && consumo <= 800) return 25000;
+    if (consumo > 800 && consumo <= 1000) return 15000;
+}    
 
-
-
-function economia(contaM) {
-    let consumo = (contaM - 24.26)*0.95553117;
-    let custoP = custoPainel(consumo);
-    let economiaTotal = 0;
-    while (economiaTotal < custoP) {
-      let economiaMes = (contaM * 1.008 ** meses) - 72;
-      economiaTotal += economiaMes;
-      meses++
+function economia () {
+    let meses = 1
+    let contaText = document.getElementById('conta').value;
+    let contaNum = Number(contaText.replace(',','.'));
+    if (contaNum > 1000) return;
+    let consumo = ((contaNum - 24.26)*0.95553117).toFixed(2);
+    if (consumo <= 0) {
+        alert('Valor muito baixo, balblabla')
+    } else {
+        console.log(consumo)
+        let custoP = custoPainel(consumo);
+        let economiaTotal = 0;
+        while (economiaTotal < custoP) {
+          let economiaMes = (contaNum * 1.008 ** meses) - 72;
+          economiaTotal += economiaMes;
+          meses++
+        }
+        console.log(meses)
+        return meses;
     }
-    return meses;
 }
 
-console.log(economia(250, 15000))
