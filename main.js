@@ -29,8 +29,8 @@ function mascara (valorRecebido) {
 function custoPainel (consumo) {
     if (consumo > 0 && consumo <= 400) return 15000;
     if (consumo > 400 && consumo <= 600) return 22000;
-    if (consumo > 600 && consumo <= 800) return 25000;
-    if (consumo > 800 && consumo <= 1000) return 15000;
+    if (consumo > 600 && consumo <= 800) return 26000;
+    if (consumo > 800 && consumo <= 1000) return 30000;
 }    
 
 function economia () {
@@ -50,7 +50,7 @@ function economia () {
           economiaTotal += economiaMes;
           meses++
         }
-        console.log(meses)
+        alert(`Consumo energético médio é de ${consumo} Kwh, vai gastar R$${String(custoP).replace(/(\d)(\d{3})$/,"$1.$2")},00 em energia solar, após, pagar R$72,00 em média fixo, e recupera em ${meses} meses - aproximadamente ${Math.round(meses/12)} anos.`)
         return meses;
     }
 }
