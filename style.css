@@ -81,18 +81,18 @@ header {
     color: white;
 }
 
-ul {
+header .links__navigation {
     display: flex;
     align-items: center;
     padding: 0px 20px;
 }
 
-ul li {
+.links__navigation li {
     margin: 0px 35px;
     font-size: 15px;
 }
 
-ul li a {
+.links__navigation li a {
     color: var(--link-color);
 }
 
@@ -197,6 +197,7 @@ ul li a {
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
+    padding-bottom: 90px;
 }
 
 .diferenciais .card {
@@ -243,6 +244,7 @@ ul li a {
 .calculadora .calculadora__text p {
     margin: 20px 0;
     color: white;
+    line-height: 22px;
 }
 
 .calculadora .calculadora__input {
@@ -252,11 +254,46 @@ ul li a {
 .calculadora__input .input {
     display: flex;
     flex-direction: column;
+}
+
+.calculadora__input .input input {
     width: 50%;
+}
+
+.calculadora__input .btn__calculo {
+    margin-top: 20px;
 }
 
 footer {
     padding: 2.7rem  1.4rem;
+    background-color: #363636;
+}
+
+footer .conteiner__footer {
+    display: flex;
+    color: #c3c3c3;
+    line-height: 22px;
+}
+
+footer .conteiner__footer ul {
+    width: 25%;
+}
+
+footer .conteiner__footer h3 {
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+footer .conteiner__footer ul > p {
+    margin-bottom: 40px;
+}
+
+footer .conteiner__footer li {
+    margin: 10px 0;
+}
+
+footer .conteiner__footer a {
+    color: white;
 }
 
 
@@ -329,10 +366,19 @@ footer {
     .calculadora .calculadora__input {
         width: 90%;
         text-align: center;
+        justify-content: center;
         padding: 0;
     }
-    .calculadora .calculadora__input {
+    .calculadora__input .input {
+        align-items: center;
+        justify-content: center;
+    }
+    footer .conteiner__footer {
         flex-direction: column;
+    }
+    footer .conteiner__footer ul {
+        width: 100%;
+        margin-bottom: 30px;
     }
 }
 
