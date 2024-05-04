@@ -34,13 +34,14 @@ function custoPainel (consumo) {
 }    
 
 function economia () {
-    let meses = 1
+    let quadro = document.getElementById('res');
+    quadro.innerHTML = '';
+    let meses = 1;
     let contaText = document.getElementById('conta').value;
     let contaNum = Number(contaText.replace(',','.'));
-    if (contaNum > 1000) return;
     let consumo = ((contaNum - 24.26)*0.95553117).toFixed(2);
-    if (consumo <= 0) {
-        alert('Valor muito baixo, balblabla')
+    if (consumo <= 0 || consumo >= 1000) {
+        alert('Valor fora do escopo, balblabla')
     } else {
         console.log(consumo)
         let custoP = custoPainel(consumo);
@@ -50,8 +51,25 @@ function economia () {
           economiaTotal += economiaMes;
           meses++
         }
-        alert(`Consumo energético médio é de ${consumo} Kwh, vai gastar R$${String(custoP).replace(/(\d)(\d{3})$/,"$1.$2")},00 em energia solar, após, pagar R$72,00 em média fixo, e recupera em ${meses} meses - aproximadamente ${Math.round(meses/12)} anos.`)
+        quadro.innerHTML = (`Consumo energético médio é de ${consumo} Kwh, vai gastar R$${String(custoP).replace(/(\d)(\d{3})$/,"$1.$2")},00 em energia solar, após, pagar R$72,00 em média fixo, e recupera em ${meses} meses - aproximadamente ${Math.round(meses/12)} anos.`)
         return meses;
     }
 }
+
+const button = document.getElementById('btn');
+const popup = document.querySelector('.popup-wrapper');
+
+button.addEventListener('click', () => {
+    popup.style.display = 'block';
+    let quadro = document.getElementById('res');
+    quadro.innerHTML = 'Oiiiiii, tem que preencher um valor válido entr 0 e 1000, para valores maiores que mil o planejamento é maior, a nivel idnustrial, ertc etc';
+})
+
+popup.addEventListener('click', event => {
+    const classClickedEvent = event.target.classList[0];
+    console.log(classClickedEvent);
+    const classNames = ['popup-close', 'popup-link', 'popup-wrapper']
+    const closePopup = classNames.some(classNames => classNames === classClickedEvent)   // o some() itera sobre o array e verifica se um dos itens atende à condição classNames === classClickedEvent e retorna true or false
+    if (closePopup) {popup.style.display = 'none'};
+});   
 
