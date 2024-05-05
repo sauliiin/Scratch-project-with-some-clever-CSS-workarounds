@@ -42,6 +42,7 @@ function economia () {
     let consumo = ((contaNum - 24.26)*0.95553117).toFixed(2);
     if (consumo <= 0 || consumo >= 1000) {
         alert('Valor fora do escopo, balblabla')
+        quadro.innerHTML = 'Oiiiiii, tem que preencher um valor válido entr 0 e 1000, para valores maiores que mil o planejamento é maior, a nivel idnustrial, ertc etc';
     } else {
         console.log(consumo)
         let custoP = custoPainel(consumo);
@@ -61,8 +62,6 @@ const popup = document.querySelector('.popup-wrapper');
 
 button.addEventListener('click', () => {
     popup.style.display = 'block';
-    let quadro = document.getElementById('res');
-    quadro.innerHTML = 'Oiiiiii, tem que preencher um valor válido entr 0 e 1000, para valores maiores que mil o planejamento é maior, a nivel idnustrial, ertc etc';
 })
 
 popup.addEventListener('click', event => {
