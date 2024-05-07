@@ -15,7 +15,7 @@
         <nav>
             <ul class="links__navigation">
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Calculadora</a></li>
+                <li><a href="#calc">Calculadora</a></li>
                 <li><a href="#">Dicas</a></li>
             </ul>
         </nav>
@@ -30,7 +30,7 @@
                 <h1>Energias Sustentaveis</h1>
                 <h2>Facilidade e Sustentabilidade </h2>
                 <div>
-                    <button class="btn__calculo">Calculo de Energia!</button>
+                    <a class="btn__calculo" href="#calc">Calculadora</a>
                 </div>
             </div>
             <div class="main__img">
@@ -94,7 +94,7 @@
         </div>
     </section>
 
-    <section class="calculadora">
+    <section class="calculadora" id="calc">
         <div class="conteiner__calculadora">
             <div class="calculadora__text">
                 <h2>Orientações e Info para Calculadora</h2>
@@ -104,11 +104,18 @@
             </div>
             <div class="calculadora__input">
                 <div class="input">
-                    imput 1 <input type="text">
-                    input 2 <input type="text">
-                    input 3 <input type="text">
-                    input 4 <input type="text">
-                    <button class="btn__calculo" type="button">Calcular</button>
+                    Qual a médio do valor da sua conta de luz? <input class="conta" id="conta" type="text" placeholder="R$ 00,00" maxlength="7" oninput="anyKeyPressed(event)">
+                    <button class="btn__calculo" id="btn" onclick="economia()" type="button">Calcular</button>
+                    
+                    <div class="popup-wrapper">
+                        <div class="popup" id="popup">
+                            <div class="popup-close">x</div>
+                            <div class="popup-content">
+                                <p id="res">Texto blablabla</p>
+                                <a class="popup-link" href="https://i.pinimg.com/originals/0c/64/9a/0c649a17ec1e5f5ca340248b4ef4e4be.gif">Saiba mais</a>
+                            </div>                       
+                        </div> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,7 +125,7 @@
         <div class="conteiner__footer">
             <ul>
                 <h3>EnergyRevive</h3>
-                <p>Motivando e incentivando o uso de energias renovaveis, trazemos a modernidade e sustentabilidade
+                <p>Motivando muito incentivando o uso de energias renovaveis, trazemos a modernidade e sustentabilidade
                     necessária para nosso fututo próspero</p>
             </ul>
             <ul>
