@@ -165,7 +165,7 @@ header .links__navigation {
     border-radius: 12px;
     margin-top: 20px;
     padding: 2.7rem 1.4rem;
-    box-shadow: 0px 0px 6px 6px #fbff005e;
+    box-shadow: 0px 0px 4px 4px #fbff004f;
 }
 .resultados2 {
     background: var(--bg-resultado-section);
