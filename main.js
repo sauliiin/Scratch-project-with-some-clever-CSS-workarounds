@@ -52,7 +52,7 @@ function economia () {
           economiaTotal += economiaMes;
           meses++
         }
-        quadro.innerHTML = (`Consumo energético médio é de ${consumo} Kwh, vai gastar R$${String(custoP).replace(/(\d)(\d{3})$/,"$1.$2")},00 em energia solar, após, pagar R$72,00 em média fixo, e recupera em ${meses} meses - aproximadamente ${Math.round(meses/12)} anos.`)
+        quadro.innerHTML = (`O seu consumo energético mensal é de ${consumo} Kwh. Para suprir esse consumo, é necessário um investimento médio de R$${String(custoP).replace(/(\d)(\d{3})$/,"$1.$2")},00 para a instalação de energia solar. Após, você vai pagar um valor fixo de aproximadamente R$72,00 e recuperará o valor investido em ${meses} meses, aproximadamente ${Math.round(meses/12)} anos.`)
         return meses;
     }
 }
