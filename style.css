@@ -96,6 +96,11 @@ header .links__navigation {
     color: var(--link-color);
 }
 
+header .links__navigation :hover {
+    font-weight: 800;
+    text-decoration: underline;
+}
+
 /* MAIN */
 
 .main__conteiner {

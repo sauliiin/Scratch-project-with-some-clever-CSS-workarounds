@@ -53,11 +53,10 @@ li, a, button {
 }
 
 :root {
-    --main-backgroud: #14424b;
     --text-color: #fff;
     --link-color: #fff;
-    --btn-gradient: linear-gradient(#fe9611, #ff5c00);
-    --bg-resultado-section: #fe9611;
+    --btn-gradient: linear-gradient(to right, #005485, hsl(251, 100%, 21%));
+    --bg-resultado-section: #19fe11;
 }
 
 body {
@@ -67,6 +66,22 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 25px; 
     background: var(--main-backgroud); 
+
+}
+
+:root {
+    --main-backgroud: rgba(255, 0, 0, 0);
+    animation: changeColor 10s infinite;
+}
+  
+@-webkit-keyframes changeColor {
+    0%   {background-color: rgb(0, 153, 255);}
+    16%  {background-color: rgb(0, 119, 199);}
+    32%  {background-color: rgb(53, 53, 201);}
+    48% {background-color: rgb(0, 24, 104);}
+    64%  {background-color:rgb(53, 53, 201);}
+    80%  {background-color: rgb(0, 119, 199);}
+    100%  {background-color: rgb(0, 153, 255);}
 }
 
 header {
@@ -74,7 +89,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background: var(--main-backgroud);
+    
 }
 
 .logo {
@@ -98,6 +113,11 @@ header .links__navigation {
     color: var(--link-color);
 }
 
+header .links__navigation :hover {
+    font-weight: 800;
+    text-decoration: underline;
+}
+
 /* MAIN */
 
 .main__conteiner {
@@ -105,7 +125,7 @@ header .links__navigation {
     align-items: center;
     justify-content: space-between;
     padding-top: 30px;
-    background: var(--main-backgroud);
+    
 }
 
 .main__text {
@@ -151,21 +171,21 @@ header .links__navigation {
 .btn__calculo {
     padding: 5px;
     width: 5%;
-    border: none;
     border-radius: 5px;
     background: var(--btn-gradient);
+    box-shadow: 5px 5px 5px 0px #000000a6;
     color: #fff;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 112px;
 }
 
 /* SECTION Resultados */
 .resultados {
-    background: var(--bg-resultado-section);
+    background:rgb(0, 25, 138);
     border-radius: 12px;
     margin-top: 20px;
     padding: 2.7rem 1.4rem;
-    box-shadow: 0px 0px 4px 4px #fbff004f;
+    box-shadow: 0px 0px 5px 5px #0001134f;
 }
 .resultados2 {
     background: var(--bg-resultado-section);
@@ -196,7 +216,7 @@ header .links__navigation {
 }
 .resultados .resultados__text2 p {
     color: rgb(0, 0, 0);
-    font-weight: 600;
+    font-weight: 900;
     width: 100%;
     margin-left: 20px;
     padding: 5px
@@ -419,7 +439,7 @@ footer .conteiner__footer a {
     outline-color: transparent;
     outline-style: solid;
     color: rgb(0, 0, 0);
-    box-shadow: 0 0 8px 8px #417fc2c4;
+    box-shadow: 0 0 8px 8px #000000c4;
     transition: 0.7s;   
 }
 .conta:focus{
@@ -427,7 +447,7 @@ footer .conteiner__footer a {
     outline-style: solid;
     color: aliceblue;
     background-color:#000000;
-    box-shadow: 0 0 8px 8px rgba(255, 166, 0, 0.555);
+    box-shadow: 0 0 8px 8px rgb(98, 224, 255);
     transition: 0.7s;   
 }
 .btn__calculo:hover{
@@ -435,7 +455,7 @@ footer .conteiner__footer a {
     outline-style: solid;
     cursor: pointer;
     color: rgb(255, 255, 255);
-    box-shadow: 0 0 8px 8px #417fc2c4;
+    box-shadow: 0 0 5px 5px #000000c4;
     transition: 0.7s;   
 }
 .btn__calculo:focus{
