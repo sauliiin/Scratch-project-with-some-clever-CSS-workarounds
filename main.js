@@ -22,7 +22,7 @@ function anyKeyPressed (event) {
 function mascara (valorRecebido) {
     valorRecebido = valorRecebido.replace(/\D/g,'');  
     valorRecebido = valorRecebido.replace(/(\d)(\d{2})$/,"$1,$2"); // Coloca uma virgula antes do 2 últimos números
-    if ((Number(valorRecebido.replace(',','.'))) > 1000) setTimeout(() => {alert('Maior que 1000, Blablabla')}, 300);
+    if ((Number(valorRecebido.replace(',','.'))) > 1000) setTimeout(() => {alert('O consumo informado exige a implantação de uma rede mais complexo, cujo valor não é possíveis precisar de forma assertiva sem uma análise no local.')}, 300);
     return valorRecebido;
 }
 
@@ -41,8 +41,8 @@ function economia () {
     let contaNum = Number(contaText.replace(',','.'));
     let consumo = ((contaNum - 24.26)*0.95553117).toFixed(2);
     if (consumo <= 0 || consumo >= 1000) {
-        alert('Valor fora do escopo, balblabla')
-        quadro.innerHTML = 'Oiiiiii, tem que preencher um valor válido entr 0 e 1000, para valores maiores que mil o planejamento é maior, a nivel idnustrial, ertc etc';
+        alert('Por favor, digite um valor entre 0 e 1000.')
+        quadro.innerHTML = 'É necessário preencher um valor válido entre 0 e 1000. Para valores maiores que mil, exige-se a implantação de uma rede mais complexo, cujo valor não é possíveis precisar de forma assertiva sem uma análise no local.';
     } else {
         console.log(consumo)
         let custoP = custoPainel(consumo);
@@ -52,7 +52,7 @@ function economia () {
           economiaTotal += economiaMes;
           meses++
         }
-        quadro.innerHTML = (`Consumo energético médio é de ${consumo} Kwh, vai gastar R$${String(custoP).replace(/(\d)(\d{3})$/,"$1.$2")},00 em energia solar, após, pagar R$72,00 em média fixo, e recupera em ${meses} meses - aproximadamente ${Math.round(meses/12)} anos.`)
+        quadro.innerHTML = (`O seu consumo energético mensal é de <strong>${consumo} Kwh</strong>. Para suprir esse consumo, é necessário um investimento médio de <strong>R$${String(custoP).replace(/(\d)(\d{3})$/,"$1.$2")},00</strong> para a instalação de energia solar. Após, você vai pagar um valor fixo de aproximadamente <strong>R$72,00</strong> e recuperará o valor investido em <strong>${meses} meses</strong>, aproximadamente ${Math.round(meses/12)} anos.`)
         return meses;
     }
 }

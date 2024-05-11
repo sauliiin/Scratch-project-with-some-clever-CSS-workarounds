@@ -19,7 +19,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -76,7 +76,7 @@ header {
 }
 
 .logo {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
     color: white;
 }
@@ -89,11 +89,16 @@ header .links__navigation {
 
 .links__navigation li {
     margin: 0px 35px;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .links__navigation li a {
     color: var(--link-color);
+}
+
+header .links__navigation :hover {
+    font-weight: 800;
+    text-decoration: underline;
 }
 
 /* MAIN */
@@ -198,10 +203,11 @@ header .links__navigation {
     justify-content: space-between;
     margin: 30px auto;
     padding-bottom: 90px;
+    text-align: justify;
 }
 
 .diferenciais .card {
-    width: 26%;
+    width: 30%;
     cursor: pointer;
     padding: 30px;
     border-radius: 15px;
@@ -211,7 +217,7 @@ header .links__navigation {
 
 .diferenciais .card:hover {
     /* box-shadow: 0px 10px 67px 8px #e6e6fa85; */
-    box-shadow: 0px 0px 20px 5px #0000005e;
+    box-shadow: 0px 0px 15px 15px #0000005e;
 }
 
 .diferenciais .card img {
@@ -396,7 +402,7 @@ footer .conteiner__footer a {
 
 .conta {
     margin-top: 10px;
-    font: bold 15pt "Arial";
+    font: bold 16pt sans-serif;
     text-align: center;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.859);   
@@ -442,6 +448,7 @@ footer .conteiner__footer a {
 
 
 .popup-wrapper {
+    font-size: 1.1rem;
     display: none;
     background: rgba(0, 0, 0, .5);
     position: fixed;
@@ -453,10 +460,10 @@ footer .conteiner__footer a {
 
 .popup {  
     width: 100%;
-    max-width: 300px;
-    height: 200px; 
-    margin: 20% auto;
-    padding: 20px;
+    max-width: 350px;
+    height: 300px; 
+    margin: 15% auto;
+    padding: 25px;
     background: white;
     position: relative;
     text-align: center;
