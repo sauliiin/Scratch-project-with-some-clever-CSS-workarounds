@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/styleCalc.css">
+    <script src="/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="">EnergyRevive</a>
+        <nav>
+            <ul class="links__navigation">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="Calc.html">Calculadora</a></li>
+                <li><a href="More.html">Dicas</a></li>
+            </ul>
+        </nav>
+        <div class="menu__icon">
+            <img src="/assets/menu-icon.png" alt="icone de menu">
+        </div>
+    </header>
+
+    <main>
+        <section class="main__conteiner">
+            <div class="main__text">
+                <h1>CALCULADORA DE ENERGIA SOLAR</h1>
+            </div>
+            <div class="main__img">
+                <img src="/assets/lampada.png" alt="painel solar na cidade">
+            </div>
+        </section>
+    </main>
+
+    <section class="resultados">
+        <div class="container__resultados">
+            <div class="resultados__text">
+                Quem instalou energia solar, tem que pagar conta de luz? Compensa instalar energia solar? Entenda como nossa calculadora funciona!
+            </div>
+        </div>
+    </section>
+
+    <section class="diferenciais">
+        <div class="cardP">
+            <div class="texto__card">
+                <p>
+                    Sim, quem tem energia solar paga conta de luz. Mesmo que a quantidade de energia gerada pelo sistema seja maior do que a consumida no mês, será necessário pagar Cosip e a taxa mínima. É uma fonte de energia renovável, não polui e possui um vida útil de aproximadamente 25 anos. Economicamente, por reduzir a conta de luz em até 90%, trazendo o retorno do investimento em 5 anos.      
+                </p>
+            </div>
+        </div>
+        <div class="conteiner__diferenciais">
+            <div class="card">
+                <div class="texto__card">
+                    <h3 class="titulo">Cosip</h3>
+                    <p>
+                        A Contribuição de Iluminação Pública (Cosip) é um tributo municipal que serve para arcar com a manutenção do serviço de iluminação pública. Ela é cobrada na fatura emitido pela CEMIG, mas é integralmente destinado ao município. Em Belo Horizonte, o valor cobrado atualmente é de R$ 24,26.    
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="texto__card">
+                    <h3 class="titulo">Taxa mínima</h3>
+                    <p>
+                        É o valor que o usuário deve pagar por estar conectado à rede elétrica e ter energia a qualquer momento. Afinal, quando o sistema de energia solar não produz energia, a casa usa a eletricidade vinda da rede de distribuição. O valor médio pago a título de taxa mínima é de R$ 47,74. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resultados">
+        <div class="container__resultados">
+            <div class="resultados__text2">
+                <h1>Se eu tenho que pagar conta de luz mesmo após instalar painéis solares, realmente compensa o investimento?</h1>
+                <h2>Provavelmente sim! Enquanto a conta de luz teve um aumento de 47% nos últimos 5 anos, o custo da instalação de painéis solares diminui consideravelmente. Dito isso, nossos cálculos levam alguns fatores em consideração:</h2>
+                <p>1 - Seu consumo médio de energia.</p>
+                <p>2 - Investimento necessário para instalação de painéis solares para suprir a faixa de consumo em que você se enquadra.</p>
+                <p>3 - Custos fixos: Cosip e taxa mínima.</p>
+                <p>4 - Estimativa do aumento da conta de luz.</p>
+                <h4>Venha descobrir mais com nossa calculadora! Basta inserir o valor médio de sua conta de luz abaixo.</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="calculadora" id="calc">
+        <div class="conteiner__calculadora">
+            <div class="main__img2">
+                <img src="/assets/thinking.png" alt="painel solar na cidade">
+            </div>
+            <div class="calculadora__input">
+                <div class="input">
+                    Qual a médio do valor da sua conta de luz? <input class="conta" id="conta" type="text" placeholder="R$ 00,00" maxlength="7" oninput="anyKeyPressed(event)">
+                    <button class="btn__calculo" id="btn" onclick="economia()" type="button">Calcular</button>
+                    
+                    <div class="popup-wrapper">
+                        <div class="popup" id="popup">
+                            <div class="popup-close">x</div>
+                            <div class="popup-content">
+                                <p id="res">Texto</p>
+                            </div>                       
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="calculadora" id="calc">
+
+    </section>
+
+    <footer>
+        <div class="conteiner__footer">
+            <ul>
+                <h3>EnergyRevive</h3>
+                <p>Motivando muito incentivando o uso de energias renovaveis, trazemos a modernidade e sustentabilidade
+                    necessária para nosso fututo próspero</p>
+            </ul>
+            <ul>
+                <h3>Seções</h3>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Calculadora</a></li>
+                <li><a href="#">Dicas</a></li>
+            </ul>
+            <ul>
+                <h3>Saiba Mais</h3>
+                <li><a href="#">artigo 1</a></li>
+                <li><a href="#">artigo 2</a></li>
+                <li><a href="#">artigo 3</a></li>
+            </ul>
+            <ul>
+                <h3>Responsaveis</h3>
+                <p>Site desenvolvido e projetado para UPX3 - Energias Renovais, Grupo 3 - Newton Paiva</p>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>
