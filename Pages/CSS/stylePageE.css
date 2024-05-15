@@ -91,6 +91,21 @@ a, button {
     text-decoration: none;
     width: 75px;
     border-radius: 15px;
+
+}
+
+.link {
+    background: rgba(255, 255, 255, 0.603);
+    border-radius: 20px;
+    text-align: center;
+    width: 100px;
+    margin: 0px 0px 12px 85%;
+}
+.link:hover {   
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 5px 5px #ffffffc4;
+    transition: 0.7s;   
 }
 
 

@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* RESET DAS CONFIGUÇÕES DEFAULT DO BROWSER */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+li {
+    text-decoration: none;
+    color: #000000;
+}
+a, button {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+:root {
+    --main-backgroud: rgba(255, 0, 0, 0);
+    background-image: url("/assets/lampNature.jpg");
+    background-size: cover;
+}
+  
+body {
+    max-width: 1110px;
+    padding: 0 5%;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    line-height: 25px; 
+    background: var(--main-backgroud);
+}
+
+:root {
+    --main-backgroud: rgba(255, 255, 255, 0);
+    animation: changeColor 10s infinite;
+}
+  
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;    
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+header .links__navigation {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.links__navigation li {
+    margin: 0px 35px;
+    font-size: 18px;
+}
+
+.links__navigation li a {
+    color: var(--link-color);
+}
+
+header .links__navigation :hover {
+    transition: 600ms;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+/* MAIN */
+
+.main__conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    
+}
+
+.main__text {
+    margin-bottom: 5%;
+    margin-bottom: 5%;
+    width: 50%;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.main__text h1 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+}
+
+.main__text h2 {
+    font-size: 22px;
+    margin-top: 14px;
+
+}
+
+.main__text div {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main__img img {
+    width: 100%;
+}
+.main__img2 {
+    width: 50%;
+    padding: 20px;
+    margin-left: 200px;
+
+}
+
+.menu__icon{
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+/* SECTION Resultados */
+.resultados {
+    position: relative;
+    background-size: cover;
+    border-radius: 12px;
+    margin-top: 20px;
+    padding: 25px;
+    box-shadow: 0px 0px 10px 10px #000000;
+    text-align: justify;
+    background-color: #ffffff;
+    width: 100%;
+    height: 600px;
+    text-align: justify;
+    color: #000000;
+}
+
+
+
+.myVideo {
+    position: absolute;
+    border-radius: 12px;
+    top: 0;
+    left: 0;
+    z-index: -1; /*apenas um -1 é necessário quando se trabalha com relative + absolute, sendo pai e filho*/
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* evita do video passar a altura desejada do .wrap */
+    color: #000000;
+}
+  
+.resultados2 {
+    background: var(--bg-resultado-section);
+    margin-top: 20px;
+    padding: 10px;
+
+}
+
+.resultados__text2 h1, h2, h4 {
+    text-align: justify;
+    width: 100%;
+    padding: 5PX;
+
+}
+.resultados__text2 p {
+    width: 100%;
+    padding: 10px;
+}
+
+
+.diferenciais .conteiner__diferenciais {
+    /* background: white; */
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    padding-bottom: 90px;
+    text-align: justify;
+}
+
+.diferenciais .card {
+    width: 48%;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 12px;
+    background: white;
+    transition: 0.3s;
+}
+
+.diferenciais .card:hover {
+    /* box-shadow: 0px 10px 67px 8px #e6e6fa85; */
+    box-shadow: 0px 0px 15px 15px #fbff00;
+}
+
+.diferenciais .card img {
+    width: 60px;
+}
+
+.diferenciais .card .titulo {
+    margin: 13px 0;
+    font-weight: 600;
+}
+
+
+* {
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
