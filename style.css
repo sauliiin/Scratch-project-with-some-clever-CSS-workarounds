@@ -52,7 +52,11 @@ li, a, button {
 }
 
 :root {
-    --main-backgroud: #14424b;
+    background: linear-gradient(to right, #000000, #18525e);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     --text-color: #fff;
     --link-color: #fff;
     --btn-gradient: linear-gradient(#fe9611, #ff5c00);
@@ -64,7 +68,7 @@ body {
     padding: 0 5%;
     margin: 0 auto;
     font-family: 'Poppins', sans-serif; 
-    background: var(--main-backgroud); 
+    background: var(--main-backgroud);
 }
 
 header {
@@ -97,8 +101,9 @@ header .links__navigation {
 }
 
 header .links__navigation :hover {
-    font-weight: 800;
+    transition: 0.5s;
     text-decoration: underline;
+    font-weight: 800;
 }
 
 /* MAIN */
@@ -109,6 +114,7 @@ header .links__navigation :hover {
     justify-content: space-between;
     padding-top: 30px;
     background: var(--main-backgroud);
+    text-shadow: 0 0 1px #000000, 0 0 1px #000000;
 }
 
 .main__text {
@@ -144,7 +150,6 @@ header .links__navigation :hover {
 
 .menu__icon{
     display: none;
-    cursor: pointer;
     position: relative;
     z-index: 2;
 }
@@ -163,7 +168,10 @@ header .links__navigation :hover {
     background: var(--bg-resultado-section);
     border-radius: 12px;
     margin-top: 20px;
-    padding: 2.7rem 1.4rem;
+    padding: 35px;
+    line-height: 1.6rem;
+    text-align: justify;
+    box-shadow: 0px 0px 25px 5px #461a00;
 }
 
 .resultados .container__resultados {
@@ -204,11 +212,11 @@ header .links__navigation :hover {
     margin: 30px auto;
     padding-bottom: 90px;
     text-align: justify;
+    line-height: 1.5rem;
 }
 
 .diferenciais .card {
-    width: 30%;
-    cursor: pointer;
+    width: 31%;
     padding: 30px;
     border-radius: 15px;
     background: white;
@@ -217,7 +225,7 @@ header .links__navigation :hover {
 
 .diferenciais .card:hover {
     /* box-shadow: 0px 10px 67px 8px #e6e6fa85; */
-    box-shadow: 0px 0px 15px 15px #0000005e;
+    box-shadow: 0px 0px 15px 15px #000000;
 }
 
 .diferenciais .card img {
@@ -271,27 +279,40 @@ header .links__navigation :hover {
 }
 
 footer {
-    padding: 2.7rem  1.4rem;
-    background-color: #363636;
+    padding: 25px;
+    background: linear-gradient(to right, #000000, #072f38);
+    margin-bottom: 20px;
+    margin-top: -22px;
 }
 
 footer .conteiner__footer {
     display: flex;
     color: #c3c3c3;
     line-height: 22px;
+    width: 100%;
 }
 
 footer .conteiner__footer ul {
-    width: 25%;
+    
+}
+footer .midle {
+    width: 80%;
+    margin-left: 45px;
+}
+
+footer .border {
+    width: 90%;
+    line-height: 22px;
 }
 
 footer .conteiner__footer h3 {
     margin-bottom: 16px;
     font-weight: 600;
+    width: 90%;
 }
 
 footer .conteiner__footer ul > p {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 footer .conteiner__footer li {
@@ -300,6 +321,10 @@ footer .conteiner__footer li {
 
 footer .conteiner__footer a {
     color: white;
+}
+footer .conteiner__footer a:hover {
+    color: white;
+    font-weight: 800;
 }
 
 
@@ -425,7 +450,6 @@ footer .conteiner__footer a {
 .btn__calculo:hover{
     outline-color: transparent;
     outline-style: solid;
-    cursor: pointer;
     color: rgb(255, 255, 255);
     box-shadow: 0 0 0 5px rgb(16, 0, 87);
     transition: 0.7s;   
@@ -433,7 +457,6 @@ footer .conteiner__footer a {
 .btn__calculo:focus{
     outline-color: transparent;
     outline-style: solid;
-    cursor: pointer;
     color: rgb(0, 0, 0);
     background-color:rgb(16, 0, 87);
     box-shadow: 0 0 0 5px rgb(15, 57, 245);
@@ -446,59 +469,3 @@ footer .conteiner__footer a {
 }
 
 
-
-.popup-wrapper {
-    font-size: 1.1rem;
-    display: none;
-    background: rgba(0, 0, 0, .5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.popup {  
-    width: 100%;
-    max-width: 350px;
-    height: 300px; 
-    margin: 15% auto;
-    padding: 25px;
-    background: white;
-    position: relative;
-    text-align: center;
-    animation-name: run;
-    animation-duration: 1s;    
-}
-
-.popup p {
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    padding: 5px 6px 25px;
-    text-align: justify;
-    width: 100%;
-}
-
-.popup a {
-    color: white;
-    cursor: pointer;
-    margin-top: auto;
-    padding: 6px 5px;
-    text-align: center;
-    text-decoration: none;
-    background: linear-gradient(#fe9611, #ff5c00);
-}
-
-.popup-close {
-    color: black;
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    cursor: pointer;
-}
-
-@keyframes run {
-    from {margin-left: -300px;}
-    to {margin-left: 40%;}
-}
-  

@@ -86,16 +86,9 @@ a, button {
 }
 
 /* SECTION Resultados */
-.links__navigation {
-    background: rgba(0, 0, 0, 0.801);
-    text-decoration: none;
-    width: 75px;
-    border-radius: 15px;
-
-}
 
 .link {
-    background: rgba(255, 255, 255, 0.603);
+    background: rgba(255, 255, 255, 0.425);
     border-radius: 20px;
     text-align: center;
     width: 100px;
@@ -104,21 +97,9 @@ a, button {
 .link:hover {   
     outline-color: transparent;
     outline-style: solid;
-    box-shadow: 0 0 5px 5px #ffffffc4;
+    box-shadow: 0 0 8px 5px #ffffffe5;
+    background: rgba(255, 255, 255, 0.596);
     transition: 0.7s;   
-}
-
-
-.links__navigation {
-    align-items: center;
-    padding: 0px 30px;
-    margin: 20px 0px 20px 680px;
-    font-size: 28px;
-    color: white;
-}
-
-.links__navigation :hover {
-    font-weight: 800;
 }
 
 

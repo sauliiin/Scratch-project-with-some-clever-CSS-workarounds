@@ -6,7 +6,6 @@ function play() {
 function playVid() {  
     document.getElementById("resultados").style.transition = "2s"
     document.getElementById("resultados").style.backgroundColor = "#ffffff13"
-    document.getElementById("resultados").style.color = "white"
 } 
 
 function pause() { 
