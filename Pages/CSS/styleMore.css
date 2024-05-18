@@ -57,8 +57,11 @@ a, button {
 }
 
 :root {
-    --main-backgroud: rgba(255, 0, 0, 0);
-    background-image: url("/assets/lamp.jpg");
+    background-size: cover;
+    background: url("/assets/lamp.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
   
@@ -94,6 +97,12 @@ header .links__navigation {
     align-items: center;
     padding: 0px 20px;
 }
+header .links__navigation :hover {
+    transition: 0.5s;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
 
 .links__navigation li {
     margin: 0px 35px;
@@ -167,9 +176,14 @@ header .links__navigation :hover {
     border-radius: 12px;
     margin-top: 20px;
     padding: 2.7rem 1.4rem;
-    box-shadow: 0px 0px 10px 10px #000000;
+    box-shadow: 0px 0px 15px 15px #000000;
     text-align: justify;
-    background-color: #ffffffc5;
+    transition: 2s;
+    background-color: #ffffff3b;
+}
+.resultados:hover {
+    transition: 1s;
+    background-color: #fffffff1;
 }
 
 .resultados2 {
@@ -180,14 +194,12 @@ header .links__navigation :hover {
 }
 
 .resultados .resultados__text2 h1, h2, h4 {
-    color: rgb(0, 0, 0);
     text-align: justify;
     width: 100%;
     padding: 5PX;
 
 }
 .resultados .resultados__text2 p {
-    color: rgb(0, 0, 0);
     width: 100%;
     padding: 10px;
 }
@@ -204,7 +216,6 @@ header .links__navigation :hover {
 
 .diferenciais .card {
     width: 48%;
-    cursor: pointer;
     padding: 30px;
     border-radius: 15px;
     background: white;
@@ -213,7 +224,7 @@ header .links__navigation :hover {
 
 .diferenciais .card:hover {
     /* box-shadow: 0px 10px 67px 8px #e6e6fa85; */
-    box-shadow: 0px 0px 15px 15px #fbff00;
+    box-shadow: 0px 0px 20px 8px #fbff00;
 }
 
 .diferenciais .card img {
@@ -224,8 +235,6 @@ header .links__navigation :hover {
     margin: 13px 0;
     font-weight: 600;
 }
-
-
 
 
 
