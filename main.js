@@ -1,19 +1,3 @@
-const menuIcon = document.querySelector('.menu__icon')
-const linksNav = document.querySelector('.links__navigation')
-
-
-
-menuIcon.addEventListener('click', function abrirMenu() {
-    if(linksNav.classList.contains('ativo')) {
-        linksNav.classList.remove('ativo')
-        document.querySelector('.menu__icon img').src = 'assets/menu-icon.png'
-    } else {
-        linksNav.classList.add('ativo')
-        document.querySelector('.menu__icon img').src = 'assets/closeX-icon.png'
-    }
-})
-//========================================================================================================//
-
 function anyKeyPressed (event) {
     let campo = event.target;            // Pega o campo onde o evento ocorreu
     campo.value = mascara(campo.value);   // Chama a função máscara para o valor do campo

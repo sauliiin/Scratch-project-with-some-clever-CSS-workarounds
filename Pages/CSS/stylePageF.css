@@ -215,6 +215,7 @@ header .links__navigation :hover {
 }
 
 .link:hover {   
+    border-style: hidden;
     outline-color: transparent;
     box-shadow: 0 0 8px 8px #ffffffe5;
     background: rgba(255, 255, 255, 0.596);
@@ -228,6 +229,7 @@ a, button {
 }
 
 .link {
+    border-style: hidden;
     font-size: 25px;
     background: linear-gradient(to right, #c19aff88, hsla(204, 81%, 46%, 0.5));
     box-shadow: 0 0 8px 5px #ffffff;

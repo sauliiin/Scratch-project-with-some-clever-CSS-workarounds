@@ -76,8 +76,9 @@ a, button {
     width: 100%;
     padding: 20px;
     border-radius: 20px;
-    margin: 8% 20% 20% 20%;
-    max-width: 55%;
+    margin: 9% 23%;
+    width: 750px;
+    max-width: 50%;
     text-align: justify;
 }
 .content h1 {
@@ -88,10 +89,14 @@ a, button {
 
 .link {
     background: rgba(255, 255, 255, 0.425);
+    font-size: 22px;
     border-radius: 20px;
     text-align: center;
     width: 100px;
-    margin: 0px 0px 12px 85%;
+    height: 30px;
+    margin: 5px 85%;
+    border-style: none;
+    position: sticky;
 }
 .link:hover {   
     outline-color: transparent;

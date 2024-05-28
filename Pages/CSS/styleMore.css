@@ -396,10 +396,11 @@ footer .conteiner__footer a {
     border-radius: 15px;
     text-align: center;
     width: 40%;
-    height: 10%;
+    height: 35px;
     font-size: 18px;
-    margin-left: 28%;
-    margin-top: 5%;
+    margin: 30px 0px 0px 30%;
+    
+    
 }
 .btn:hover{
     outline-color: transparent;
