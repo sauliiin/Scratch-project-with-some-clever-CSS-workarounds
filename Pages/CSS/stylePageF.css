@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 
 
 :root {
-    background-image: url("/assets/lampNature.jpg");
+    background-image: url("/assets/lampNature.webp");
     background-size: cover;
 }
   
@@ -146,6 +146,7 @@ header .links__navigation :hover {
     text-align: justify;
     color: #000000;
     line-height: 30px;
+    object-fit: cover;
 }
 .resultados:hover {
     text-shadow: 0 4px 2px #000000, 0 0 3px #000000;
@@ -166,6 +167,7 @@ header .links__navigation :hover {
     height: 100%;
     overflow: hidden; /* evita do video passar a altura desejada do .wrap */
     color: #000000;
+    object-fit: cover;
 }
   
 .resultados2 {
@@ -213,6 +215,7 @@ header .links__navigation :hover {
 }
 
 .link:hover {   
+    border-style: hidden;
     outline-color: transparent;
     box-shadow: 0 0 8px 8px #ffffffe5;
     background: rgba(255, 255, 255, 0.596);
@@ -226,6 +229,7 @@ a, button {
 }
 
 .link {
+    border-style: hidden;
     font-size: 25px;
     background: linear-gradient(to right, #c19aff88, hsla(204, 81%, 46%, 0.5));
     box-shadow: 0 0 8px 5px #ffffff;

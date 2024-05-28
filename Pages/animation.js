@@ -13,4 +13,7 @@ function pause() {
     document.getElementById("resultados").style.backgroundColor = "#ffffffff"
 } 
 
+function openLink(link) {
+    window.open(link, "_self")
+}
 
