@@ -58,7 +58,7 @@ a, button {
 
 :root {
     background-size: cover;
-    background: url("/assets/lamp.jpg") no-repeat center center fixed;
+    background: url("/assets/lamp.webp") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -396,7 +396,7 @@ footer .conteiner__footer a {
     border-radius: 15px;
     text-align: center;
     width: 40%;
-    height: 32px;
+    height: 10%;
     font-size: 18px;
     margin-left: 28%;
     margin-top: 5%;
