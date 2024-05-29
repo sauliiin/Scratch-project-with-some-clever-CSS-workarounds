@@ -225,7 +225,7 @@ header .links__navigation :hover {
 
 .diferenciais .card:hover {
     /* box-shadow: 0px 10px 67px 8px #e6e6fa85; */
-    box-shadow: 0px 0px 15px 15px #000000;
+    box-shadow: 0px 0px 15px 20px #144754;
 }
 
 .diferenciais .card img {
@@ -324,6 +324,7 @@ footer .conteiner__footer a {
 }
 footer .conteiner__footer a:hover {
     color: white;
+    transition: 0.5s;
     font-weight: 800;
 }
 
