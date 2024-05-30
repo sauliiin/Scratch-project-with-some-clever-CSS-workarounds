@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 
 
 :root {
-    background-image: url("/assets/lampNature.webp");
+    background-image: url("/assets/lampNature.jpg");
     background-size: cover;
 }
   
@@ -233,9 +233,8 @@ a, button {
     font-size: 25px;
     background: linear-gradient(to right, #c19aff88, hsla(204, 81%, 46%, 0.5));
     box-shadow: 0 0 8px 5px #ffffff;
-    border-radius: 20px;
     text-align: center;
-    height: 30px;
+    height: 35px;
     width: 120px;
     text-decoration: none;
     cursor: pointer;
