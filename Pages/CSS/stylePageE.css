@@ -28,6 +28,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+ width: 1920px;
+ height: 1080px;
 
 }
 ol, ul {
@@ -73,11 +75,10 @@ a, button {
     bottom: 0;
     background: rgba(0, 0, 0, 0.541);
     color: #f1f1f1;
-    width: 950px;
-    height: 100%;
+    width: 1050px;
     padding: 20px;
     border-radius: 20px;
-    margin: 10% 40%;
+    margin: 15% 45%;
     text-align: justify;
 }
 .content h1 {
