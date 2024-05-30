@@ -27,29 +27,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-body {
-	line-height: 1;
-
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
 li {
     text-decoration: none;
     color: #000000;
+    list-style: none;
 }
 a, button {
     text-decoration: none;
@@ -74,11 +55,6 @@ body {
     background: var(--main-backgroud);
 }
 
-:root {
-    --main-backgroud: rgba(255, 255, 255, 0);
-    animation: changeColor 10s infinite;
-}
-  
 header {
     display: flex;
     justify-content: space-between;
@@ -130,7 +106,6 @@ header .links__navigation :hover {
 
 .main__text {
     margin-bottom: 5%;
-    margin-bottom: 5%;
     width: 50%;
     color: var(--text-color);
     font-weight: 600;
@@ -153,65 +128,42 @@ header .links__navigation :hover {
     margin-top: 20px;
 }
 
-.main__img img {
-    width: 100%;
-}
-.main__img2 {
-    width: 50%;
-    padding: 20px;
-    margin-left: 200px;
-
-}
-
-.menu__icon{
-    display: none;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-}
-
 /* SECTION Resultados */
 .resultados {
     background-size: cover;
     border-radius: 12px;
     margin-top: 20px;
-    padding: 2.7rem 1.4rem;
+    padding: 30px;
     box-shadow: 0px 0px 15px 15px #000000;
     text-align: justify;
     transition: 2s;
     background-color: #ffffff3b;
+    width: 100%;
+    height: 100%;
 }
 .resultados:hover {
     transition: 1s;
     background-color: #fffffff1;
 }
 
-.resultados2 {
-    background: var(--bg-resultado-section);
-    margin-top: 20px;
-    padding: 10px;
 
-}
 
-.resultados .resultados__text2 h1, h2, h4 {
+.resultados .resultados__text2 h1, h2, h4, p {
     text-align: justify;
     width: 100%;
-    padding: 5PX;
+    height: 100%;
+    padding: 5px;
 
 }
-.resultados .resultados__text2 p {
-    width: 100%;
-    padding: 10px;
-}
-
 
 .diferenciais .conteiner__diferenciais {
     /* background: white; */
     display: flex;
     justify-content: space-between;
-    margin: 30px auto;
-    padding-bottom: 90px;
+    margin: 50px auto;
+    padding-bottom: 50px;
     text-align: justify;
+    line-height: 0.8cm;
 }
 
 .diferenciais .card {
@@ -221,7 +173,9 @@ header .links__navigation :hover {
     transition: 0.3s;
 }
 .texto__card {
-    padding: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .diferenciais .card:hover {
@@ -229,31 +183,29 @@ header .links__navigation :hover {
     box-shadow: 0px 0px 20px 8px #fbff00;
 }
 
-.diferenciais .card img {
-    width: 60px;
-}
-
 .diferenciais .card .titulo {
     margin: 13px 0;
     font-weight: 600;
 }
+
 
 .btn {
     background-color: #000000;
     color: #c3c3c3;
     border-radius: 15px;
     text-align: center;
-    width: 40%;
-    height: 35px;
-    font-size: 18px;
-    margin: 20px 100px 0px 30%;   
+    width: 30%;
+    height: 40px;
+    font-size: 16px;
+    margin: 5% 5% 5% 30%;   
 }
 
-.btn:hover{
+.btn:hover, .btn1:hover {
     outline-color: transparent;
     outline-style: solid;
     cursor: pointer;
     color: rgb(255, 255, 255);
+    font-size: larger;
     box-shadow: 0 0 5px 5px #000000c4;
     transition: 0.7s;   
 }
