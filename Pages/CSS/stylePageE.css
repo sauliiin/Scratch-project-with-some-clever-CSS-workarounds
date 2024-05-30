@@ -62,6 +62,8 @@ a, button {
     position: fixed;
     right: 0;
     bottom: 0;
+    width: 1000px;
+    height: 500px;
 }
   
   /* Add some content at the bottom of the video/page */
