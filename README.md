@@ -14,4 +14,6 @@ Despite its rough edges, it serves as a constant source of inspiration. I often 
 
 ---
 
-**PS:** This site is **not optimized for mobile** — and I don’t plan to do it, since it’s just a scratch project I revisit from time to time. 😉
+**PS:** This site is **not optimized for mobile** — and I don’t plan to do it, since it’s just a scratch project I revisit from time to time. 😉  
+
+**Note:** This was made like the Mayas and Incas — **without any help from ChatGPT.**
